@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="main_layout.html">
+
+<div layout:fragment="siteContent">
+</div>
+</html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="head.html">
+</head>
+<body>
+<div class="container" style="min-height: 700px">
+  <div th:insert="navbar.html"></div>
+      <div class="row">
+        <div class="col-9 mx-auto">
+          <form action="/add-student" method="post">
+            <div class="row mt-4">
+              <div class="col-12">
+                <label>NAME:</label>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12">
+                <input class="form-control" type="text" name="name" placeholder="Insert Name" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12">
+                <label>SURNAME:</label>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12">
+                <input class="form-control" type="text" name="surname" placeholder="Insert surname" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12">
+                <label>EXAM:</label>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12">
+                <input class="form-control" type="number" name="exam" placeholder="Insert Exam Points" required>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <button class="btn btn-success btn-sm">ADD STUDENT</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+<div th:insert="footer.html"></div>
+</body>
+</html>
